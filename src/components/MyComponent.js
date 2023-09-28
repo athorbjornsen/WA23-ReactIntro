@@ -6,7 +6,7 @@ const MyComponent = () => {
     <>
       <div className="aaa">
         <article>
-          <Title title={'It Works'} />
+          <Title title={'Yaay- it Works!'} />
           <p>........</p>
         </article>
       </div>

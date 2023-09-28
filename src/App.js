@@ -3,38 +3,23 @@ import Title from './components/Title';
 import Wrapper from './components/Wrapper';
 import Food from './components/Food';
 import { useState } from 'react';
+import AlarmInputStuff from './components/AlarmInputStuff';
+
 
 const food = ['Pizza', 'Hamburger', 'Coke'];
 
 const App = () => {
-  const [inputValue, setInputValue] = useState('');
-
-  const handleButtonClick = () => {
-    console.log('cliiicked');
-  };
-
-  const handleInputChange = (event) => {
-    const newValue = event.target.value;
-    setInputValue(newValue);
-    console.log('change');
-  };
+  const [inputValue, setInputValue] = useState("");
 
   return (
-    <div>
-      <Food food={food} />
-      <p>Read the README.md to see the tasks</p>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={handleInputChange}
-        placeholder="Write here."
-      />
+    <div>    
       <Mycomponent />
-      <Wrapper>
-        <Title title="Test" />
-      </Wrapper>
-      <button onClick={handleButtonClick}>Button</button>
-    </div>
+      <p>And these are a few of my favourite things...</p>   
+      <Food food={food} />     
+                   
+      <AlarmInputStuff inputValue={inputValue} setInputValue={setInputValue} />
+      {inputValue}          
+    </div>    
   );
 };
 
